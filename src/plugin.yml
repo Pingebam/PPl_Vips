@@ -1,0 +1,49 @@
+name: PPl_Vips
+version: 1.0
+authors: [Pingebam, Fear837]
+website: http://craftolution.de
+
+main: de.pingebam.bukkit.ppl_vips.PPl_Vips
+depend: [PPl]
+prefix: PPl-V
+database: true
+
+
+commands:
+  ppl_vips:
+    usage: /ppl_vips [config|info|status|reload|help]
+    aliases: [pplv]
+    description: Administrative Einstellungen des Plugins
+    permission: ppl_vips.configuration
+    permission-message: Du darfst die Konfigration nicht einsehen.
+
+
+permissions:
+  ppl_vips.*:
+    default: op
+    description: Alle Rechte auf alles aus PPl_Vips
+    children:
+      ppl_vips.reload
+      ppl_vips.configuration.*
+      ppl_vips.configuration.change
+      ppl_vips.configuration.reload
+
+  ppl_vips.reload:
+    default: op
+    description: Reload des gesamten Plugins
+    children:
+      ppl_vips.configuration.reload
+
+  ppl_vips.configuration.*:
+    default: op
+    description: Einstellungen dieses Plugins lesen und aendern
+  ppl_vips.configuration.change:
+    default: op
+    description: Aendern der Konfiguration des Plugins
+  ppl_vips.configuration.reload:
+    default: op
+    description: Reload der Konfiguration des Plugins
+
+  ppl_vips.cooldown:
+    default: not op
+    description: Es gibt Cooldowns auf Kommandos

@@ -1,0 +1,130 @@
+general:
+
+  # Farbgebungen
+  # Folgende Farben sind erlaubt: aqua, black, blue, dark_aqua, dark_blue, 
+  # dark_gray, dark_green, dark_purple, dark_red, gold, gray, green, 
+  # light_purple, red, white, yellow
+  color:
+    # im Falle einer erfolgten Durchfuehrung oder einer positiven Antwort
+    success: green
+    # im Falle einer allgemeinen Antwort
+    info: yellow
+    # im Falle einer negativen Antwort oder eines Fehlers
+    warning: red
+    # im Falle einer Nebenbemerkung
+    background: gray
+
+  # Staerke der Hilfequalitaet (none, low, medium, high, highest)
+  help-level: high
+
+  # Staerke der Ausgabequalitaet (none, low, medium, high, highest)
+  warning-level: medium
+
+  # Einstellungen des Debuggings
+  # Ausgabe der Debugnachrichten (none, console, op, console_op, op_console, 
+  # players, console_players, players_console, public)
+  # none            - Keine Debug-Ausgaben
+  # console         - An die Konsole
+  # op              - An alle Ops, die online sind
+  # console_op      - Immer an die Konsole und eine Kopie an alle Ops
+  # op_console      - An die Ops, die online sind, 
+  #                   wenn keiner online ist, dann an die Konsole
+  # players         - An die definerte Spielerliste
+  # console_players - An die Konsole und an die definierte Spielerliste
+  # players_console - An die definierte Spielerliste,
+  #                   wenn keiner online ist, dann an die Konsole
+  # public          - Im oeffentlichen Chat
+  debug-type: console_players
+  # Wenn an players, dann an diese definierte Liste.
+  debug-playerlist: [Pingebam, Fear837]
+  # Staerke der Debuggingqualitaet (none, low, medium, high, highest)
+  debug-level: medium
+
+
+settings:
+
+  # Reload auf Konfiguration nach Aenderung automatisch durchfuehren
+  auto-reload-configuration-on-change: false
+
+  
+# Einstellungen fuer die Kommandos
+# Cooldown-Angaben in Sekunden
+commands:
+
+  # Fluggeschwindigkeit eines Spielers im Standardfall, normal: 1.0
+  fly-speed: 0.8
+  fly-cooldown: 30
+  # Aenderungen der Fluggeschwindigkeit abhaengig vom Verhalten
+  fly-dynamic-change-speed: false
+  # Normalverhalten fuer Teleports (allow, ask, deny)
+  tp-default: ask
+  tp-cooldown: 30
+  barrage-cooldown: 600
+  firebarrage-cooldown: 600
+  shock-cooldown: 600
+  rocket-cooldown: 600
+  heal-cooldown: 600
+  kit-cooldown: 30
+  # Maximalzahl der Homes im Standardfall
+  home-default-amount: 1
+  # Maximalzahl der Homes fuer Vips
+  home-vip-amount: 2
+  # Maximalzahl der Homes fuer Veteranen
+  home-veteran-amount: 3
+  home-cooldown: 30
+  # Erlaubt die optionale Vergabe von Namen fuer Homes statt 1,2,3
+  home-aliases: true
+  sethome-cooldown: 30
+  me-cooldown: 120
+  slap-cooldown: 120
+  time-cooldown: 86400
+  # Modus der Zeitveraenderung
+  # normal - Sprung zur neuen Zeit
+  # stop   - Sprung zur neuen Zeit, vergeht dann nicht fuer eine 
+  #          Dauer (time-active)
+  # jump   - Sprung zur neuen Zeit, nach Dauer (time-active) wieder
+  #          Sprung zurueck (Die Zeit bleibt nie stehen.)
+  # travel - Sprung zur neuen Zeit, vergeht dann nicht fuer eine
+  #          Dauer (time-active) und springt danach wieder zurueck
+  time-mode: travel
+  # Zeit, die ein Sondersprung aktiv ist.
+  time-active: 300
+  # Verzoegerung, bis die Aenderung eintreten darf
+  time-delay: 10
+  # Zeit, die zwischen zwei Aenderungen vergehen muss
+  time-to-time-delay: 60
+  # Die Menge der Anfragen auf Zeitaenderungen, die akzeptiert werden.
+  # Die Ausfuehrung findet fruehestmoeglich statt (time-to-time-delay)
+  time-queue-size: 5
+  # Staerke der Chatnachrichten im Falle eines Zeitwechsels
+  # (none, low, medium, high, highest)
+  time-chat: highest
+  weather-cooldown: 43200
+  # Modus des Wetterwechsels
+  # normal - Sprung zum neuen Wetter
+  # jump   - Sprung zum neuen Wetter, nach Dauer (weather-active) wieder
+  #          Sprung zurueck zum alten Wetter
+  weather-mode: jump
+  # Zeit, die ein Sondersprung aktiv ist.
+  weather-active: 300
+  # Verzoegerung, bis die Aenderung eintreten darf
+  weather-delay: 10
+  # Zeit, die zwischen zwei Aenderungen vergehen muss
+  weather-to-weather-delay: 60
+  # Die Menge der Anfragen auf Wetteraenderungen, die akzeptiert werden.
+  # Die Ausfuehrung findet fruehestmoeglich statt (weather-to-weather-delay)
+  weather-queue-size: 5
+  # Zeit, die seit dem letzten Wetterwechsel vergangen worden sein muss,
+  # bevor das Wetter automatisch geaendert werden kann.
+  weather-to-weather-autochange-minimal-time: 120
+  # Mindestzeit fuer regnerisches Wetter am Stueck
+  weather-min-rainy-time: 120
+  # Maximalzeit fuer regnerisches Wetter am Stueck
+  weather-max-rainy-time: 720
+  # Mindestzeit fuer sonniges Wetter am Stueck
+  weather-min-sunny-time: 300
+  # Maximalzeit fuer sonniges Wetter am Stueck
+  weather-max-sunny-time: 1200
+  # Staerke der Chatnachrichten im Falle eines Wetterwechsels
+  # (none, low, medium, high, highest)
+  weather-chat: highest
